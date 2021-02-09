@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather_navigation"
+    app:startDestination="@id/fragmentWeatherLocation">
+
+    <fragment
+        android:id="@+id/fragmentWeatherLocation"
+        android:name="com.example.lowesweather.fragmentWeatherLocation"
+        android:label="fragment_weather_location"
+        tools:layout="@layout/fragment_weather_location" >
+        <action
+            android:id="@+id/action_fragmentWeatherLocation_to_fragmentWeatherForecast"
+            app:destination="@id/fragmentWeatherForecast" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWeatherForecast"
+        android:name="com.example.lowesweather.FragmentWeatherForecast"
+        android:label="fragment_weather_forecast"
+        tools:layout="@layout/fragment_weather_forecast" >
+        <action
+            android:id="@+id/action_fragmentWeatherForecast_to_fragmentWeatherDetails"
+            app:destination="@id/fragmentWeatherDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWeatherDetails"
+        android:name="com.example.lowesweather.FragmentWeatherDetails"
+        android:label="fragment_weather_details"
+        tools:layout="@layout/fragment_weather_details" />
+</navigation>
